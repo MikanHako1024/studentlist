@@ -1,0 +1,49 @@
+# Project: studentlist
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = main.o Add.o Change.o Delete..o Empty.o InitClear.o PriSca.o SaveLoad.o
+LINKOBJ  = main.o Add.o Change.o Delete..o Empty.o InitClear.o PriSca.o SaveLoad.o
+LIBS     = -L"D:/Mikan/EXE/DEV-CPP/MinGW64/lib" -L"D:/Mikan/EXE/DEV-CPP/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Mikan/EXE/DEV-CPP/MinGW64/include" -I"D:/Mikan/EXE/DEV-CPP/MinGW64/x86_64-w64-mingw32/include" -I"D:/Mikan/EXE/DEV-CPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Mikan/EXE/DEV-CPP/MinGW64/include" -I"D:/Mikan/EXE/DEV-CPP/MinGW64/x86_64-w64-mingw32/include" -I"D:/Mikan/EXE/DEV-CPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Mikan/EXE/DEV-CPP/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = studentlist.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Add.o: Add.cpp
+	$(CPP) -c Add.cpp -o Add.o $(CXXFLAGS)
+
+Change.o: Change.cpp
+	$(CPP) -c Change.cpp -o Change.o $(CXXFLAGS)
+
+Delete..o: Delete..cpp
+	$(CPP) -c Delete..cpp -o Delete..o $(CXXFLAGS)
+
+Empty.o: Empty.cpp
+	$(CPP) -c Empty.cpp -o Empty.o $(CXXFLAGS)
+
+InitClear.o: InitClear.cpp
+	$(CPP) -c InitClear.cpp -o InitClear.o $(CXXFLAGS)
+
+PriSca.o: PriSca.cpp
+	$(CPP) -c PriSca.cpp -o PriSca.o $(CXXFLAGS)
+
+SaveLoad.o: SaveLoad.cpp
+	$(CPP) -c SaveLoad.cpp -o SaveLoad.o $(CXXFLAGS)
