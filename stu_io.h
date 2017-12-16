@@ -1,6 +1,5 @@
-#include <stdio.h>
+// Pri, PriAll, Sca Functiones
 
-#include "base.h"
 
 void Pri(TYPE stu)
 {
@@ -17,6 +16,7 @@ void PriAll(TYPE *headstu, int top)
 	for(i=0; i<top; i++)
 		Pri( *(headstu+i) );
 }
+
 
 TYPE Sca()
 {
