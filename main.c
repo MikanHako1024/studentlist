@@ -1,6 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "stu_base.h"
 
-#include "base.h"
+#include "stu_io.h"
+#include "stu_array.h"
+#include "stu_sys.h"
+#include "stu_file.h"
+
 
 // ？调整参数顺序 
 

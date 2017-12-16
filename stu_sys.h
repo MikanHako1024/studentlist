@@ -1,7 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+// Init/Clear Function
 
-#include "base.h"
 
 void Clear()	// Çå¿Õ/³õÊ¼»¯ 
 {

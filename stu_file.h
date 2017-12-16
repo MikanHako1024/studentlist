@@ -1,8 +1,15 @@
-#include <stdio.h>
+// Save, Load, Empty, PriFname Functions
 
-#include "base.h"
 
-void Save(TYPE *stu, int top)
+#define FNAME "stu_list.dat"
+	// the name of file 
+
+void PriFname() // 打印文件名 
+{
+	printf(FNAME);
+}
+
+void Save(TYPE *stu, int top) // 储存 
 {
 	FILE *fp;
 	if( (fp=fopen(FNAME, "wb+"))==NULL ) 
@@ -20,7 +27,7 @@ void Save(TYPE *stu, int top)
 }
 
 
-int Load(TYPE *stu)
+int Load(TYPE *stu) // 读取 
 {
 	FILE *fp;
 	if( (fp=fopen(FNAME, "rb+"))==NULL )
@@ -36,4 +43,16 @@ int Load(TYPE *stu)
 			printf("读文件出错!\n");
 	fclose(fp);
 	return top;
+}
+
+
+void Empty() 	// 清空 
+{
+	FILE *fp;
+	if( (fp=fopen(FNAME, "w"))==NULL )
+	{
+		printf("不能打开文件!\n");
+		return ;
+	}
+	fclose(fp);
 }
